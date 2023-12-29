@@ -3,7 +3,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(event)
         local opts = {buffer = event.buf}
 
-        vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+        vim.keymap.set("n", "gcd", function() vim.lsp.buf.definition() end, opts)
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
         vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
         vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
@@ -74,10 +74,10 @@ cmp.setup({
         {name = 'nvim_lua'},
     },
     mapping = cmp.mapping.preset.insert({
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<leader>ccp'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<leader>ccn'] = cmp.mapping.select_next_item(cmp_select),
+        ['<leader>ccy'] = cmp.mapping.confirm({ select = true }),
+        ['<leader>ccc'] = cmp.mapping.complete(),
     }),
     window = {
         documentation = cmp.config.window.bordered(),
