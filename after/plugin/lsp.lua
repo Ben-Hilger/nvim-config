@@ -74,10 +74,10 @@ cmp.setup({
         {name = 'nvim_lua'},
     },
     mapping = cmp.mapping.preset.insert({
-        ['<leader>ccp'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<leader>ccn'] = cmp.mapping.select_next_item(cmp_select),
-        ['<leader>ccy'] = cmp.mapping.confirm({ select = true }),
-        ['<leader>ccc'] = cmp.mapping.complete(),
+        ['<leader>cp'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<leader>cn'] = cmp.mapping.select_next_item(cmp_select),
+        ['<leader>cy'] = cmp.mapping.confirm({ select = true }),
+        ['<leader>cc'] = cmp.mapping.complete(),
     }),
     window = {
         documentation = cmp.config.window.bordered(),
